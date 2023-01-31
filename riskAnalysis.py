@@ -23,10 +23,9 @@ usInterest = float(json.loads(response.text)['central_bank_rates'][0]['rate_pct'
 
 unemployment = 3.5 
 
-risk += (usInflation*unemployment*usInterest)*10
+risk += (usInflation*unemployment*usInterest)*10 +.2
 
 def analyse(root, types, data):
-    plt.clear()
     global risk
     root2 = Toplevel(root)
     root2.title("Analysis")
